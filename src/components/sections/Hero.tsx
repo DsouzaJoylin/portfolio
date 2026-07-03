@@ -156,12 +156,29 @@ export function Hero() {
         >
           {/* Center card */}
           <div className="relative z-10 w-56 h-56 rounded-full glass-card flex flex-col items-center justify-center shadow-2xl">
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-xl shadow-primary-500/30">
-              <span className="font-display text-3xl font-bold text-white">JJ</span>
-            </div>
-            <p className="mt-4 font-display font-semibold text-sm">Full Stack Developer</p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">React · Flutter · Node</p>
-          </div>
+
+  {/* Profile Image */}
+  <div className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl shadow-primary-500/30">
+    <img
+      src="/images/profile.jpeg"
+      alt={personalInfo.name}
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  
+
+  {/* Role */}
+  <p className="text-sm text-primary-500 font-medium">
+    Full Stack Developer
+  </p>
+
+  {/* Skills */}
+  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+    React • Flutter • Node.js
+  </p>
+
+</div>
 
           {/* Orbiting icons */}
           <div className="absolute inset-0 animate-spin-slow">
