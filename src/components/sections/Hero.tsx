@@ -185,9 +185,9 @@ export function Hero() {
           <div className="relative z-10 w-56 h-56 rounded-full glass-card flex flex-col items-center justify-center shadow-2xl">
 
   {/* Profile Image */}
-  <div className="relative z-10 w-64 h-64 rounded-full glass-card flex flex-col items-center justify-center shadow-2xl">
+ <div className="relative z-10 w-64 h-64 lg:w-72 lg:h-72 rounded-full glass-card flex flex-col items-center justify-center shadow-2xl">
 
-  <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl shadow-primary-500/30">
+  <div className="relative w-36 h-36 lg:w-44 lg:h-44 rounded-full overflow-hidden border-[5px] border-primary-500 shadow-2xl shadow-primary-500/40">
     <img
       src="/images/profile.jpeg"
       alt={personalInfo.name}
@@ -195,20 +195,18 @@ export function Hero() {
     />
   </div>
 
-  
+  <h3 className="mt-4 text-xl font-bold">
+    {personalInfo.name}
+  </h3>
 
-  {/* Role */}
   <p className="text-sm text-primary-500 font-medium">
     Full Stack Developer
   </p>
 
-  {/* Skills */}
   <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
     React • Flutter • Node.js
   </p>
-
 </div>
-
           {/* Orbiting icons */}
           <div className="absolute inset-0 animate-spin-slow">
             {techIcons.map((tech, i) => {
