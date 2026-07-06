@@ -185,11 +185,13 @@ export function Hero() {
           <div className="relative z-10 w-56 h-56 rounded-full glass-card flex flex-col items-center justify-center shadow-2xl">
 
   {/* Profile Image */}
-  <div className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl shadow-primary-500/30">
+  <div className="relative z-10 w-64 h-64 rounded-full glass-card flex flex-col items-center justify-center shadow-2xl">
+
+  <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl shadow-primary-500/30">
     <img
       src="/images/profile.jpeg"
       alt={personalInfo.name}
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover object-top"
     />
   </div>
 
