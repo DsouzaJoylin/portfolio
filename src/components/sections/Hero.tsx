@@ -179,7 +179,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative hidden lg:flex items-center justify-center h-[480px]"
+          className="relative flex items-center justify-center h-[380px] lg:h-[480px] mt-10 lg:mt-0"
         >
           {/* Center card */}
           <div className="relative z-10 w-56 h-56 rounded-full glass-card flex flex-col items-center justify-center shadow-2xl">
