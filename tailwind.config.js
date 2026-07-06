@@ -36,6 +36,7 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'float-slow': 'float 8s ease-in-out infinite',
         'spin-slow': 'spin 8s linear infinite',
+        'spin-slow-reverse': 'spin-slow-reverse 8s linear infinite',
         'gradient': 'gradient 8s ease infinite',
         'fade-in': 'fadeIn 0.8s ease forwards',
         'slide-up': 'slideUp 0.8s ease forwards',
@@ -51,6 +52,10 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        'spin-slow-reverse': {
+          from: { transform: 'rotate(360deg)' },
+          to: { transform: 'rotate(0deg)' },
         },
         gradient: {
           '0%, 100%': { 'background-position': '0% 50%' },
