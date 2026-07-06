@@ -179,7 +179,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative flex items-center justify-center h-[380px] lg:h-[480px] mt-10 lg:mt-0"
+          className="relative flex items-center justify-center h-[320px] sm:h-[400px] lg:h-[480px]"
         >
           {/* Center card */}
           <div className="relative z-10 w-56 h-56 rounded-full glass-card flex flex-col items-center justify-center shadow-2xl">
@@ -211,7 +211,14 @@ export function Hero() {
           <div className="absolute inset-0 animate-spin-slow">
             {techIcons.map((tech, i) => {
               const angle = (i / techIcons.length) * 2 * Math.PI;
-              const radius = 200;
+              const radius =
+  typeof window !== "undefined"
+    ? window.innerWidth < 640
+      ? 110
+      : window.innerWidth < 1024
+      ? 150
+      : 200
+    : 200;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
               return (
