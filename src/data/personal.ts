@@ -8,12 +8,12 @@ export const personalInfo = {
     'Machine Learning Enthusiast',
   ],
   tagline: 'Building elegant, performant, and accessible digital experiences from concept to deployment.',
-  email: 'joylin.dsouza@example.com',
-  phone: '+91 98765 43210',
-  location: 'Mangalore, Karnataka, India',
-  github: 'https://github.com/joylin-dsouza',
+  email: 'dsouzajoylin21@gmail.com',
+  phone: '+91 8867663354',
+  location: 'Deralakatte, Karnataka, India',
+  github: 'https://github.com/DsouzaJoylin/portfolio',
   linkedin: 'https://linkedin.com/in/joylin-dsouza',
-  resumeUrl: '#',
+  resumeUrl: '/Joylin_Resume.pdf',
 };
 
 export const highlights = [

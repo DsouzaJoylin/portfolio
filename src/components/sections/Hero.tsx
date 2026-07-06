@@ -89,13 +89,35 @@ export function Hero() {
           </motion.span>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-balance"
-          >
-            Hi, I'm <span className="gradient-text">{personalInfo.name}</span>
-          </motion.h1>
+  initial={{ opacity: 0, y: 30 }}
+  animate={{
+    opacity: 1,
+    y: 0,
+    scale: [1, 1.06, 1], // Zoom In -> Zoom Out
+  }}
+  transition={{
+    duration: 3,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight"
+>
+  Hi, I'm{" "}
+  <motion.span
+    animate={{
+      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+      opacity: [1, 0.8, 1],
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="inline-block bg-gradient-to-r from-pink-500 via-orange-400 via-yellow-400 to-pink-500 bg-[length:300%_300%] bg-clip-text text-transparent"
+  >
+    {personalInfo.name}
+  </motion.span>
+</motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -138,9 +160,14 @@ export function Hero() {
             <button onClick={() => scrollTo('projects')} className="btn-primary">
               View Projects <ArrowRight size={18} />
             </button>
-            <a href={personalInfo.resumeUrl} download className="btn-secondary">
-              <Download size={18} /> Resume
-            </a>
+            <a
+  href={personalInfo.resumeUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-primary"
+>
+  Download Resume
+</a>
             <button onClick={() => scrollTo('contact')} className="btn-ghost">
               <Mail size={18} /> Hire Me
             </button>
